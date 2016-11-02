@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{76E2F25F-D71C-44D9-9A28-7346A62E6ECE}</ProjectGuid>
+    <ProjectGuid>{4B271AB1-D459-4497-852A-A76EBCAA660C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>prueba</RootNamespace>
-    <AssemblyName>prueba</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>TP4</RootNamespace>
+    <AssemblyName>TP4</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -43,6 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapaAplicacion.cs" />
+    <Compile Include="CapaAplicacionException.cs" />
+    <Compile Include="CapaControlador.cs" />
+    <Compile Include="CapaDominio.cs" />
+    <Compile Include="CapaPersistencia.cs" />
+    <Compile Include="CapaVista.cs" />
+    <Compile Include="ErrorPuntualException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
