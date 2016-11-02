@@ -1,0 +1,6 @@
+C:\Users\Acer\documents\visual studio 2015\Projects\TP4\TP4\bin\Debug\TP4.exe.config
+C:\Users\Acer\documents\visual studio 2015\Projects\TP4\TP4\obj\Debug\TP4.exe
+C:\Users\Acer\documents\visual studio 2015\Projects\TP4\TP4\obj\Debug\TP4.pdb
+C:\Users\Acer\documents\visual studio 2015\Projects\TP4\TP4\bin\Debug\TP4.exe
+C:\Users\Acer\documents\visual studio 2015\Projects\TP4\TP4\bin\Debug\TP4.pdb
+C:\Users\Acer\documents\visual studio 2015\Projects\TP4\TP4\obj\Debug\ej1.csprojResolveAssemblyReference.cache
