@@ -60,6 +60,7 @@
             this.labelTrad.Size = new System.Drawing.Size(19, 13);
             this.labelTrad.TabIndex = 2;
             this.labelTrad.Text = "----";
+            this.labelTrad.Click += new System.EventHandler(this.labelTrad_Click);
             // 
             // comboBox1
             // 

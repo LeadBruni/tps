@@ -18,7 +18,7 @@ namespace eje5
         }
 
         Fachada Fachada = new Fachada();
-        
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -36,7 +36,7 @@ namespace eje5
 
         private void textBoxXPto1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void radioBCirculo_CheckedChanged(object sender, EventArgs e)
@@ -45,6 +45,9 @@ namespace eje5
             {
                 labelRadio.Visible = true;
                 textBoxRadio.Visible = true;
+                labelP1.Visible = false;
+                textBoxXPto1.Visible = false;
+                textBoxYPto1.Visible = false;
                 labelP2.Visible = false;
                 textBoxXPto2.Visible = false;
                 textBoxYPto2.Visible = false;
@@ -58,6 +61,9 @@ namespace eje5
         {
             labelRadio.Visible = false;
             textBoxRadio.Visible = false;
+            labelP1.Visible = true;
+            textBoxXPto1.Visible = true;
+            textBoxYPto1.Visible = true;
             labelP2.Visible = true;
             textBoxXPto2.Visible = true;
             textBoxYPto2.Visible = true;
@@ -66,20 +72,45 @@ namespace eje5
             textBoxYPto3.Visible = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private bool textBoxNoVacio(object sender)
         {
-            double p1X = Convert.ToDouble(textBoxXPto1);
-            double p1Y = Convert.ToDouble(textBoxYPto1);
-            double p2X = Convert.ToDouble(textBoxXPto2);
-            double p2Y = Convert.ToDouble(textBoxYPto2);
-            double p3X = Convert.ToDouble(textBoxXPto3);
-            double p3Y = Convert.ToDouble(textBoxYPto3);
-
-            if ((radioBTriangulo.Checked))
+            if (string.IsNullOrEmpty(Text))
             {
 
-                MessageBox.Show(Fachada.perimetroTriangulo(p1X,p1Y,p2X,p2Y,p3X,p3Y));
+                return false;
             }
+            else return true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+            try
+            {
+                if ((radioBTriangulo.Checked))
+                {
+                    double p1X = double.Parse(textBoxXPto1.Text);
+                    double p1Y = double.Parse(textBoxYPto1.Text);
+                    double p2X = double.Parse(textBoxXPto2.Text);
+                    double p2Y = double.Parse(textBoxYPto2.Text);
+                    double p3X = double.Parse(textBoxXPto3.Text);
+                    double p3Y = double.Parse(textBoxYPto3.Text);
+                    MessageBox.Show("El Perimetro del Tirangulo es: " + Convert.ToString(Fachada.perimetroTriangulo(p1X, p1Y, p2X, p2Y, p3X, p3Y)) + "\n El Area del Triangulo es: " + Convert.ToString(Fachada.areaTriangulo(p1X, p1Y, p2X, p2Y, p3X, p3Y)));
+                }
+
+
+                else if (radioBCirculo.Checked)
+                {
+
+
+                    double radio = double.Parse(textBoxRadio.Text);
+                    MessageBox.Show("El Perimetro del Circulo es: " + Convert.ToString(Fachada.perimetroCirculo(radio)) + "\n El Area del Circulo es: " + Convert.ToString(Fachada.areaCirculo(radio)));
+                }
+            }
+            catch (FormatException) { MessageBox.Show("Debe completar la informacion", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+
+
         }
     }
 }

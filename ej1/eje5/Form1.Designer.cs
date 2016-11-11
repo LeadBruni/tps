@@ -61,7 +61,7 @@
             this.radioBTriangulo.Location = new System.Drawing.Point(53, 39);
             this.radioBTriangulo.Name = "radioBTriangulo";
             this.radioBTriangulo.Size = new System.Drawing.Size(69, 17);
-            this.radioBTriangulo.TabIndex = 1;
+            this.radioBTriangulo.TabIndex = 11;
             this.radioBTriangulo.TabStop = true;
             this.radioBTriangulo.Text = "Triangulo";
             this.radioBTriangulo.UseVisualStyleBackColor = true;
@@ -73,7 +73,7 @@
             this.radioBCirculo.Location = new System.Drawing.Point(253, 39);
             this.radioBCirculo.Name = "radioBCirculo";
             this.radioBCirculo.Size = new System.Drawing.Size(57, 17);
-            this.radioBCirculo.TabIndex = 2;
+            this.radioBCirculo.TabIndex = 12;
             this.radioBCirculo.Text = "Circulo";
             this.radioBCirculo.UseVisualStyleBackColor = true;
             this.radioBCirculo.CheckedChanged += new System.EventHandler(this.radioBCirculo_CheckedChanged);

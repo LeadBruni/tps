@@ -27,5 +27,10 @@ namespace ej3
              string[] traduccion = new[] {"---","One","Two","Three","Four","Five","Six","Seven","Eigth","Nine","Ten" };
             labelTrad.Text = traduccion[comboBox1.SelectedIndex];
         }
+
+        private void labelTrad_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
