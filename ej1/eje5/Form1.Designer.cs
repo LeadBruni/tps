@@ -42,6 +42,8 @@
             this.textBoxYPto1 = new System.Windows.Forms.TextBox();
             this.textBoxYPto2 = new System.Windows.Forms.TextBox();
             this.textBoxYPto3 = new System.Windows.Forms.TextBox();
+            this.labelX = new System.Windows.Forms.Label();
+            this.labelY = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -172,11 +174,31 @@
             this.textBoxYPto3.TabIndex = 6;
             this.textBoxYPto3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloNumero);
             // 
+            // labelX
+            // 
+            this.labelX.AutoSize = true;
+            this.labelX.Location = new System.Drawing.Point(71, 65);
+            this.labelX.Name = "labelX";
+            this.labelX.Size = new System.Drawing.Size(14, 13);
+            this.labelX.TabIndex = 13;
+            this.labelX.Text = "X";
+            // 
+            // labelY
+            // 
+            this.labelY.AutoSize = true;
+            this.labelY.Location = new System.Drawing.Point(108, 65);
+            this.labelY.Name = "labelY";
+            this.labelY.Size = new System.Drawing.Size(14, 13);
+            this.labelY.TabIndex = 14;
+            this.labelY.Text = "Y";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 238);
+            this.Controls.Add(this.labelY);
+            this.Controls.Add(this.labelX);
             this.Controls.Add(this.labelP3);
             this.Controls.Add(this.labelP2);
             this.Controls.Add(this.labelP1);
@@ -217,6 +239,8 @@
         private System.Windows.Forms.TextBox textBoxYPto1;
         private System.Windows.Forms.TextBox textBoxYPto2;
         private System.Windows.Forms.TextBox textBoxYPto3;
+        private System.Windows.Forms.Label labelX;
+        private System.Windows.Forms.Label labelY;
     }
 }
 

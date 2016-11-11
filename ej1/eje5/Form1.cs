@@ -45,6 +45,8 @@ namespace eje5
             {
                 labelRadio.Visible = true;
                 textBoxRadio.Visible = true;
+                labelX.Visible = false;
+                labelY.Visible = false;
                 labelP1.Visible = false;
                 textBoxXPto1.Visible = false;
                 textBoxYPto1.Visible = false;
@@ -61,6 +63,8 @@ namespace eje5
         {
             labelRadio.Visible = false;
             textBoxRadio.Visible = false;
+            labelX.Visible = true;
+            labelY.Visible = true;
             labelP1.Visible = true;
             textBoxXPto1.Visible = true;
             textBoxYPto1.Visible = true;
