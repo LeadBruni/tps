@@ -48,5 +48,11 @@ namespace eje6
             Console.WriteLine("el saldo actual de la cuenta corriente es" + Cuenta.Saldo);
             Console.WriteLine("el saldo actual de la caja de ahorro es" + CajaAhorro.Saldo);
         }
+
+        public double saldoCuentaCorriente()
+        { return Cuenta.Saldo; } 
+
+        public double saldoCajaAhorro()
+        { return CajaAhorro.Saldo; }
     }
 }

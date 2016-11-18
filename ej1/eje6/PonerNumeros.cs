@@ -12,11 +12,24 @@ namespace eje6
 {
     public partial class PonerNumeros : Form
     {
+        private string opcion;
+
+        public intermedio iIntermedio { get; set; }
+
+        Fachada Fachada = new Fachada();
+
         public PonerNumeros()
         {
             InitializeComponent();
         }
 
+
+        public void Show(string pOption)
+        {
+            this.opcion = pOption;
+            this.Show();
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -78,6 +91,71 @@ namespace eje6
             {
                 textBox1.Text = textBox1.Text.Substring(0, textBox1.TextLength - 1);
             }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != string.Empty)
+            { 
+                double monto = double.Parse(textBox1.Text);
+                switch (opcion)
+                {
+                    case "CcTr":
+                        Fachada.transferirCuentaCaja(monto);
+                        // MessageBox.Show("Cuenta Corriente: "+ Fachada.this);
+                        break;
+
+                    case "CcAc":
+                        Fachada.acreditarsaldocuentaco(monto);
+                        break;
+
+                    case "CcDe":
+                        Fachada.debitarsaldocuentaco(monto);
+                        break;
+
+                    case "CaTr":
+                        Fachada.transferirCajaaCuenta(monto);
+                        break;
+
+                    case "CaAc":
+                        Fachada.acreditarsaldocaja(monto);
+                        break;
+
+                    case "CaDe":
+                        Fachada.debitarsaldocaja(monto);
+                        break;
+                }    
+            }
+            textBox1.Text =String.Empty;
+            labelCA.Text = Convert.ToString(Fachada.saldoCajaAhorro());
+            labelCC.Text = Convert.ToString(Fachada.saldoCuentaCorriente());
+        }
+
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+
+            
+
+            opcion = opcion.Substring(0, opcion.Length - 2);
+           this.iIntermedio.SetValor(opcion);
+
+            base.OnFormClosing(e);
+
+            // Application.Restart();
+
+            //  private void PonerNumeros_FormClosing(Object sender, FormClosingEventArgs e)
+            // {
+            // if (opcion != string.Empty)
+            //{
+            //}
+        }
+
+        private void PonerNumeros_Load(object sender, EventArgs e)
+        {
+        
+        labelCA.Text = Convert.ToString(Fachada.saldoCajaAhorro());
+            labelCC.Text = Convert.ToString(Fachada.saldoCuentaCorriente());
         }
     }
 }

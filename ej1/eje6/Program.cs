@@ -6,8 +6,9 @@ using System.Windows.Forms;
 
 namespace eje6
 {
-    static class Program
+    public static class Program
     {
+        //public static string opcion;
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
@@ -16,8 +17,8 @@ namespace eje6
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new VentanaPrincipal());
-            Application.Run(new PonerNumeros());
+            Application.Run(new VentanaPrincipal());
+            //Application.Run(new PonerNumeros());
         }
     }
 }

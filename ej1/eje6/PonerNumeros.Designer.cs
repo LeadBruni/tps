@@ -41,6 +41,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelCC = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelCA = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -169,12 +175,63 @@
             this.button10.TabIndex = 2;
             this.button10.Text = "Aceptar";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Cuenta Corriente:";
+            // 
+            // labelCC
+            // 
+            this.labelCC.AutoSize = true;
+            this.labelCC.Location = new System.Drawing.Point(101, 16);
+            this.labelCC.Name = "labelCC";
+            this.labelCC.Size = new System.Drawing.Size(35, 13);
+            this.labelCC.TabIndex = 4;
+            this.labelCC.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Caja de Ahorro:";
+            // 
+            // labelCA
+            // 
+            this.labelCA.AutoSize = true;
+            this.labelCA.Location = new System.Drawing.Point(101, 45);
+            this.labelCA.Name = "labelCA";
+            this.labelCA.Size = new System.Drawing.Size(35, 13);
+            this.labelCA.TabIndex = 6;
+            this.labelCA.Text = "label4";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelCC);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.labelCA);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 212);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(219, 66);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Saldos";
             // 
             // PonerNumeros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(261, 286);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonBorrar);
@@ -188,8 +245,12 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PonerNumeros";
             this.Text = "PonerNumeros";
+            this.Load += new System.EventHandler(this.PonerNumeros_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,5 +271,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelCC;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelCA;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

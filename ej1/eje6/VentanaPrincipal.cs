@@ -12,7 +12,9 @@ namespace eje6
 {
     public partial class VentanaPrincipal : Form
     {
-        private object opcion;
+        public string tipoCuentaElegido;
+        private string valor;
+        intermedio intermedio1 = new intermedio();
 
         public VentanaPrincipal()
         {
@@ -21,20 +23,37 @@ namespace eje6
 
         public void VentanaPrincipal_Load(object sender, EventArgs e)
         {
-            opcion = string.Empty;
+            tipoCuentaElegido = string.Empty;
             labelFecha.Text = DateTime.Now.ToLongDateString();
+           // this.Enabled = true;
 
         }
 
-        private void btnCajaAhorro_Click(object sender, EventArgs e)
+        public void btnCajaAhorro_Click(object sender, EventArgs e)
         {
-            opcion += "Ca";
+            tipoCuentaElegido += "Ca";
+            intermedio1.iVentana = this;
+            intermedio1.Show(tipoCuentaElegido);
+            //instancia de form2 pasandole el valor del textbox
+            //using (intermedio frm1 = new intermedio(btnTransferencia.Text))
+            //{
+            //    frm1.ShowDialog();
+            //}
         }
 
-        private void BtnCtaCorriente_Click(object sender, EventArgs e)
+        public void BtnCtaCorriente_Click(object sender, EventArgs e)
         {
-            opcion += "Cc";
-            
+            tipoCuentaElegido += "Cc";
+            //MessageBox.Show();
+           
+            intermedio1.iVentana = this;
+            intermedio1.Show(tipoCuentaElegido);
+            //this.Enabled = false;
+
+        }
+        public void SetValor(string pValor)
+        {
+            this.valor = pValor;
         }
     }
 }

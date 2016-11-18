@@ -37,5 +37,7 @@ namespace eje6
 
         public bool puedeprestar(Cuenta cuent, double monto)/*dada una cuenta y un monto devuelve true si la cuenta puede "dar"esa guita*/
         { if (cuent.Saldo + cuent.Acuerdo >= monto) { return true; } else { return false; } }
+        
+        
     }
 }

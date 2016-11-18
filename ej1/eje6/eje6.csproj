@@ -52,6 +52,12 @@
     <Compile Include="ErrorDeAcuerdoExcepcion.cs" />
     <Compile Include="Excepcion.cs" />
     <Compile Include="Fachada.cs" />
+    <Compile Include="intermedio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="intermedio.Designer.cs">
+      <DependentUpon>intermedio.cs</DependentUpon>
+    </Compile>
     <Compile Include="PonerNumeros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="intermedio.resx">
+      <DependentUpon>intermedio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PonerNumeros.resx">
       <DependentUpon>PonerNumeros.cs</DependentUpon>
     </EmbeddedResource>
