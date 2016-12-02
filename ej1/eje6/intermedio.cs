@@ -18,7 +18,7 @@ namespace eje6
 
         public VentanaPrincipal iVentana { get; set; }
 
-        PonerNumeros Nums1 = new PonerNumeros();
+        
 
         public intermedio()
         {
@@ -47,8 +47,8 @@ namespace eje6
         {
 
             tipoTransferenciaElegida += "Tr";
-                
-                Nums1.iIntermedio = this;
+            PonerNumeros Nums1 = new PonerNumeros();
+            Nums1.iIntermedio = this;
                 Nums1.Show(tipoTransferenciaElegida);
              
         }

@@ -38,7 +38,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button0 = new System.Windows.Forms.Button();
             this.buttonBorrar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.labelCA = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -149,16 +149,6 @@
             this.buttonBorrar.UseVisualStyleBackColor = true;
             this.buttonBorrar.Click += new System.EventHandler(this.buttonBorrar_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 28);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 186);
@@ -226,6 +216,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Saldos";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 28);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // PonerNumeros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,7 +268,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button0;
         private System.Windows.Forms.Button buttonBorrar;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label1;
@@ -276,5 +275,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelCA;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
