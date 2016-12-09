@@ -26,8 +26,7 @@ namespace eje6
         {
             tipoCuentaElegido = string.Empty;
             labelFecha.Text = DateTime.Now.ToLongDateString();
-           // this.Enabled = true;
-
+           
         }
 
         public void btnCajaAhorro_Click(object sender, EventArgs e)
@@ -36,13 +35,7 @@ namespace eje6
             hacerInvisibleVentPrinc();
 
 
-            //intermedio1.iVentana = this;
-            //intermedio1.Show(tipoCuentaElegido);
-            //instancia de form2 pasandole el valor del textbox
-            //using (intermedio frm1 = new intermedio(btnTransferencia.Text))
-            //{
-            //    frm1.ShowDialog();
-            //}
+           
         }
 
         public void BtnCtaCorriente_Click(object sender, EventArgs e)
@@ -50,12 +43,7 @@ namespace eje6
             tipoCuentaElegido += "Cc";
             hacerInvisibleVentPrinc();
 
-            //MessageBox.Show();
-
-            //intermedio1.iVentana = this;
-            //intermedio1.Show(tipoCuentaElegido);
-            //this.Enabled = false;
-
+            
         }
         public void SetValor(string pValor)
         {
@@ -67,13 +55,7 @@ namespace eje6
             groupBoxCuentas.Visible = true;
             groupBoxMovimientos.Visible = false;
 
-            //btnCajaAhorro.Visible = true;
-            //BtnCtaCorriente.Visible = true;
-
-            //btnAcreditar.Visible = false;
-            //btnDebitar.Visible = false;
-            //btnTransferencia.Visible = false;
-            //btnAtras.Visible = false;
+            
         }
 
         public void hacerInvisibleVentPrinc()
@@ -81,37 +63,13 @@ namespace eje6
             groupBoxMovimientos.Visible = true;
             groupBoxCuentas.Visible = false;
 
-            //btnCajaAhorro.Visible = false;
-            //BtnCtaCorriente.Visible = false;
-
-            //btnAcreditar.Visible = true;
-            //btnDebitar.Visible = true;
-            //btnTransferencia.Visible = true;
-            //btnAtras.Visible = true;
+            
         }
 
 
         public void hacerInvicibleInterme()
         {
-            //btnTransferencia.Visible = false;
-            //btnDebitar.Visible = false;
-            //btnAcreditar.Visible = false;
-
-            //button0.Visible = true;
-            //button1.Visible = true;
-            //button2.Visible = true;
-            //button3.Visible = true;
-            //button4.Visible = true;
-            //button5.Visible = true;
-            //button6.Visible = true;
-            //button7.Visible = true;
-            //button8.Visible = true;
-            //button9.Visible = true;
-            //button10.Visible = true;
-            //buttonBorrar.Visible = true;
-            //textBox1.Visible = true;
-            //labelCA.Visible = true;
-            //labelCC.Visible = true;
+            
             groupBoxMovimientos.Visible = false;
             groupBoxOperacion.Visible = true;
 
@@ -125,26 +83,7 @@ namespace eje6
             groupBoxMovimientos.Visible = true;
             groupBoxOperacion.Visible = false;
 
-            //btnTransferencia.Visible = true;
-            //btnDebitar.Visible = true;
-            //btnAcreditar.Visible = true;
-
-            //button0.Visible = false;
-            //button1.Visible = false;
-            //button2.Visible = false;
-            //button3.Visible = false;
-            //button4.Visible = false;
-            //button5.Visible = false;
-            //button6.Visible = false;
-            //button7.Visible = false;
-            //button8.Visible = false;
-            //button9.Visible = false;
-            //button10.Visible = false;
-            //buttonBorrar.Visible = false;
-            //textBox1.Visible = false;
-            //labelCA.Visible = false;
-            //labelCC.Visible = false;
-        }
+            }
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -215,14 +154,13 @@ namespace eje6
             if (textBox1.Text != string.Empty)
             {
                 double monto = double.Parse(textBox1.Text);
-                //if ((Fachada.saldoCajaAhorro)>  0)
-                //{
+                
 
                     switch (tipoCuentaElegido)
                     {
                         case "CcTr":
                             Fachada.transferirCuentaCaja(monto);
-                            // MessageBox.Show("Cuenta Corriente: "+ Fachada.this);
+                            
                             break;
 
                         case "CcAc":
@@ -250,7 +188,6 @@ namespace eje6
                 labelCA.Text = Convert.ToString(Fachada.saldoCajaAhorro());
                 labelCC.Text = Convert.ToString(Fachada.saldoCuentaCorriente());
             }
-        //}
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
@@ -266,6 +203,12 @@ namespace eje6
             }
         }
 
+        private void btnAtrasMovimiento_Click(object sender, EventArgs e)
+        {
+           // tipoCuentaElegido = tipoCuentaElegido.Substring(0, tipoCuentaElegido.Length - 2);
+
+
+        }
 
 
 
@@ -286,5 +229,7 @@ namespace eje6
             tipoCuentaElegido += "Tr";
             hacerInvicibleInterme();
         }
+
+        
     }
 }

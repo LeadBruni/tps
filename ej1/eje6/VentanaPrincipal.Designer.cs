@@ -54,6 +54,7 @@
             this.btnDebitar = new System.Windows.Forms.Button();
             this.btnAcreditar = new System.Windows.Forms.Button();
             this.groupBoxMovimientos = new System.Windows.Forms.GroupBox();
+            this.btnAtrasMovimiento = new System.Windows.Forms.Button();
             this.groupBoxOperacion = new System.Windows.Forms.GroupBox();
             this.groupBoxCuentas = new System.Windows.Forms.GroupBox();
             this.groupBoxSaldos.SuspendLayout();
@@ -310,16 +311,27 @@
             // 
             // groupBoxMovimientos
             // 
+            this.groupBoxMovimientos.Controls.Add(this.btnAtrasMovimiento);
             this.groupBoxMovimientos.Controls.Add(this.btnAcreditar);
             this.groupBoxMovimientos.Controls.Add(this.btnTransferencia);
             this.groupBoxMovimientos.Controls.Add(this.btnDebitar);
             this.groupBoxMovimientos.Location = new System.Drawing.Point(12, 153);
             this.groupBoxMovimientos.Name = "groupBoxMovimientos";
-            this.groupBoxMovimientos.Size = new System.Drawing.Size(200, 89);
+            this.groupBoxMovimientos.Size = new System.Drawing.Size(202, 117);
             this.groupBoxMovimientos.TabIndex = 26;
             this.groupBoxMovimientos.TabStop = false;
             this.groupBoxMovimientos.Text = "Movimientos";
             this.groupBoxMovimientos.Visible = false;
+            // 
+            // btnAtrasMovimiento
+            // 
+            this.btnAtrasMovimiento.Location = new System.Drawing.Point(48, 77);
+            this.btnAtrasMovimiento.Name = "btnAtrasMovimiento";
+            this.btnAtrasMovimiento.Size = new System.Drawing.Size(75, 23);
+            this.btnAtrasMovimiento.TabIndex = 26;
+            this.btnAtrasMovimiento.Text = "Ir Atras";
+            this.btnAtrasMovimiento.UseVisualStyleBackColor = true;
+            this.btnAtrasMovimiento.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // groupBoxOperacion
             // 
@@ -411,6 +423,7 @@
         private System.Windows.Forms.GroupBox groupBoxMovimientos;
         private System.Windows.Forms.GroupBox groupBoxOperacion;
         private System.Windows.Forms.GroupBox groupBoxCuentas;
+        private System.Windows.Forms.Button btnAtrasMovimiento;
     }
 }
 
